@@ -41,6 +41,7 @@ echo "          Compiling Purex Kernel          "
 echo -e "***********************************************$nocol"
 rm -f $KERN_IMG
 make osprey_defconfig
+make menuconfig
 make zImage -j8
 if ! [ -a $KERN_IMG ];
 then
